@@ -17,7 +17,7 @@ This repo can be used to scaffold an astro package. Follow these steps to get st
 Clone the project
 
 ```bash
-  git@github.com:codiume/astro-component-starter.git my-astro-component
+  git clone git@github.com:codiume/astro-component-starter.git my-astro-component
 ```
 
 Go to the project directory
