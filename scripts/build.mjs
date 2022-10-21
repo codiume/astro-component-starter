@@ -6,7 +6,7 @@ import { clean } from 'esbuild-plugin-clean';
     const outdir = 'dist';
     await esbuild({
       bundle: false,
-      entryPoints: ['src/index.ts'],
+      entryPoints: ['src/index.ts', 'src/components/Button.astro'],
       format: 'esm',
       minify: false,
       outdir: outdir,
