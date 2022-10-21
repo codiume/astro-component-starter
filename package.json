@@ -1,7 +1,7 @@
 {
   "name": "astro-component-starter",
   "version": "1.0.0",
-  "description": "An astro component starter template",
+  "description": "An Astro component starter template",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -15,8 +15,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "astro": "^1.0.6",
-    "del": "^7.0.0",
-    "esbuild": "^0.15.5"
+    "astro": "^1.0.0",
+    "esbuild": "^0.14.54",
+    "esbuild-plugin-clean": "^0.9.0"
   }
 }

@@ -1,20 +1,30 @@
-import { deleteAsync } from 'del';
-import { build } from 'esbuild';
+import { build as esbuild } from 'esbuild';
+import { clean } from 'esbuild-plugin-clean';
 
 (async () => {
   try {
-    await deleteAsync(['dist']);
-    await build({
+    const outdir = 'dist';
+    await esbuild({
+      bundle: false,
       entryPoints: ['src/index.ts'],
-      bundle: true,
       format: 'esm',
-      outdir: 'dist',
-      outbase: 'src',
+      minify: false,
+      outdir: outdir,
       platform: 'node',
+      sourcemap: false,
+      sourcesContent: false,
       target: 'node14',
+      outExtension: {
+        '.js': '.mjs'
+      },
       loader: {
-        '.astro': 'file'
-      }
+        '.astro': 'copy'
+      },
+      plugins: [
+        clean({
+          patterns: [`${outdir}/*`]
+        })
+      ]
     });
     console.log('⚡ Done');
   } catch (error) {
