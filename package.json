@@ -13,10 +13,10 @@
   "files": [
     "/dist/index.js"
   ],
-  "author": "",
+  "author": "codiume",
   "license": "ISC",
   "devDependencies": {
-    "astro": "^1.0.0",
+    "astro": "^2.0.0",
     "esbuild": "^0.14.54",
     "esbuild-plugin-clean": "^0.9.0",
     "prettier": "^2.7.1",
