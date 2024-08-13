@@ -10,6 +10,7 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    if: ${{ false }} # This make sure the workflow is skipped without any alert
     permissions:
       id-token: write
       contents: write
