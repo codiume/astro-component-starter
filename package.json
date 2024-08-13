@@ -1,5 +1,5 @@
 {
-  "name": "astro-component-starter",
+  "name": "@codiume/astro-component-starter",
   "version": "1.0.0",
   "description": "A component stater template for Astro framework",
   "homepage": "https://github.com/codiume/astro-component-starter",
