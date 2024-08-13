@@ -46,7 +46,7 @@ Build your component
   pnpm build
 ```
 
-Build your code
+Format your code
 
 ```bash
   pnpm format
