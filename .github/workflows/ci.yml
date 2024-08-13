@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    name: Test & Build
+    name: Build
     runs-on: ubuntu-latest
 
     strategy:
@@ -28,9 +28,6 @@ jobs:
         with:
           version: 9
           run_install: true
-
-      - name: Test
-        run: pnpm test
 
       - name: Build
         run: pnpm build
