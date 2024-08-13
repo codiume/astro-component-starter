@@ -37,11 +37,17 @@ Install dependencies
 Start development server
 
 ```bash
-  pnpm run dev
+  pnpm dev
 ```
 
 Build your component
 
 ```bash
-  pnpm run build
+  pnpm build
+```
+
+Format your code
+
+```bash
+  pnpm format
 ```
