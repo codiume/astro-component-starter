@@ -1,25 +1,51 @@
 {
   "name": "astro-component-starter",
   "version": "1.0.0",
-  "description": "An Astro component starter template",
+  "description": "A component stater template for Astro framework",
+  "homepage": "https://github.com/codiume/astro-component-starter",
+  "keywords": [
+    "astro",
+    "library",
+    "starter-kit",
+    "astro-starter-kit",
+    "astro-template"
+  ],
+  "author": "MHD <m@codiume.com>",
+  "contributors": [
+    {
+      "name": "MHD",
+      "url": "https://x.com/the_dijkstra"
+    }
+  ],
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/build.mjs && npm run typecheck",
+    "start": "astro dev",
+    "preview": "astro preview",
+    "build": "astro check && node scripts/build.mjs",
     "format": "prettier --write \"**/*.{ts,tsx,md,astro,mjs}\"",
-    "typecheck": "tsc --declaration --emitDeclarationOnly --outDir dist"
+    "changeset": "changeset",
+    "changeset:version": "changeset version && pnpm run format",
+    "changeset:publish": "pnpm run build && changeset publish"
   },
-  "files": [
-    "/dist/index.js"
-  ],
-  "author": "codiume",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codiume/astro-component-starter.git"
+  },
   "devDependencies": {
-    "astro": "^2.0.0",
-    "esbuild": "^0.14.54",
-    "esbuild-plugin-clean": "^0.9.0",
-    "prettier": "^2.7.1",
-    "prettier-plugin-astro": "^0.6.0"
+    "@changesets/cli": "^2.27.7",
+    "astro": "^4.13.3",
+    "@astrojs/check": "^0.9.2",
+    "typescript": "^5.5.4",
+    "esbuild": "^0.23.0",
+    "esbuild-plugin-clean": "^1.0.1",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }

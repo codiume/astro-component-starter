@@ -31,17 +31,17 @@ Go to the project directory
 Install dependencies
 
 ```bash
-  npm install
+  pnpm install
 ```
 
 Start development server
 
 ```bash
-  npm run dev
+  pnpm run dev
 ```
 
 Build your component
 
 ```bash
-  npm run build
+  pnpm run build
 ```
