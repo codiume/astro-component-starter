@@ -26,12 +26,6 @@ importers:
       esbuild-plugin-clean:
         specifier: ^1.0.1
         version: 1.0.1(esbuild@0.23.0)
-      prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
-      prettier-plugin-astro:
-        specifier: ^0.14.1
-        version: 0.14.1
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
@@ -4516,10 +4510,12 @@ snapshots:
       '@astrojs/compiler': 2.10.2
       prettier: 3.3.3
       sass-formatter: 0.7.9
+    optional: true
 
   prettier@2.8.8: {}
 
-  prettier@3.3.3: {}
+  prettier@3.3.3:
+    optional: true
 
   prismjs@1.29.0: {}
 
@@ -4681,13 +4677,15 @@ snapshots:
     dependencies:
       queue-microtask: 1.2.3
 
-  s.color@0.0.15: {}
+  s.color@0.0.15:
+    optional: true
 
   safer-buffer@2.1.2: {}
 
   sass-formatter@0.7.9:
     dependencies:
       suf-log: 2.5.3
+    optional: true
 
   section-matter@1.0.0:
     dependencies:
@@ -4808,6 +4806,7 @@ snapshots:
   suf-log@2.5.3:
     dependencies:
       s.color: 0.0.15
+    optional: true
 
   supports-color@5.5.0:
     dependencies:
