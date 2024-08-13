@@ -20,15 +20,15 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "preview": "astro preview",
     "build": "astro check && node scripts/build.mjs",
-    "format": "prettier --write \"**/*.{ts,tsx,md,astro,mjs}\"",
+    "lint": "biome lint --write .",
+    "format": "biome format --write .",
+    "check": "biome check --write .",
     "changeset": "changeset",
     "changeset:version": "changeset version && pnpm run format",
     "changeset:publish": "pnpm run build && changeset publish"
@@ -39,13 +39,14 @@
     "url": "https://github.com/codiume/astro-component-starter.git"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.2",
+    "@biomejs/biome": "1.8.3",
     "@changesets/cli": "^2.27.7",
     "astro": "^4.13.3",
-    "@astrojs/check": "^0.9.2",
-    "typescript": "^5.5.4",
     "esbuild": "^0.23.0",
     "esbuild-plugin-clean": "^1.0.1",
     "prettier": "^3.3.3",
-    "prettier-plugin-astro": "^0.14.1"
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "^5.5.4"
   }
 }
